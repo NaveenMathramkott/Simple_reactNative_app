@@ -14,7 +14,7 @@ import {StyleSheet, View} from 'react-native';
 import Welcome from './src/Screens/Welcome/Welcome';
 
 import {SafeAreaView} from 'react-native';
-import Details from './src/Screens/Details/Details';
+// import Details from './src/Screens/Details/Details';
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -28,12 +28,12 @@ const App = () => {
   if (!loading) return <Welcome />;
   return (
     <SafeAreaView style={styles.mainWin}>
-      {/* <Header />
+      <Header />
       <Home />
       <View style={styles.bottom}>
         <BottomNav />
-      </View> */}
-      <Details />
+      </View>
+      {/* <Details /> */}
     </SafeAreaView>
   );
 };
