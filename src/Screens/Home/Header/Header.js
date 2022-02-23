@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   View,
   StatusBar,
+  Button,
 } from 'react-native';
 import React, {useState} from 'react';
 
@@ -21,12 +22,13 @@ const listTab = [
   },
 ];
 
-const Header = () => {
+const Header = ({navigation}) => {
   const [status, setStatus] = useState('Grid');
 
   const setStatusFilter = name => {
     setStatus(name);
   };
+
   return (
     <View>
       <StatusBar backgroundColor="#00B4D8" />
@@ -38,9 +40,12 @@ const Header = () => {
           {listTab.map((item, key) => (
             <TouchableOpacity
               key={key}
-              onPress={() => setStatusFilter(item.name)}
+              onPress={() => navigation.navigate('Details')}
+              // onPress={() => setStatusFilter(item.name)}
               style={[styles.btnTab, status === item.name && styles.activeTab]}>
-              <Text style={styles.tabText}>{item.name}</Text>
+              <View>
+                <Text style={styles.tabText}>{item.name}</Text>
+              </View>
             </TouchableOpacity>
           ))}
         </View>

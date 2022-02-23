@@ -22,7 +22,7 @@ const data = [
   },
   {
     name: 'dots-horizontal',
-    text: 'Components',
+    text: 'Component',
   },
 ];
 

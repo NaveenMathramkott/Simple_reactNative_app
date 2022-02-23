@@ -23,8 +23,9 @@ export default Details;
 const styles = StyleSheet.create({
   main: {
     justifyContent: 'center',
+    alignItems: 'center',
 
-    padding: 50,
+    paddingTop: 50,
   },
   img: {
     width: 320,

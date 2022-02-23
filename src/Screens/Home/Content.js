@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View, Image, FlatList} from 'react-native';
 import React from 'react';
 
-const Content = ({movies}) => {
+const Content = ({movies, navigation}) => {
   const renderMovies = ({item}) => {
     return (
       <View style={styles.card}>
@@ -27,6 +27,7 @@ const Content = ({movies}) => {
         renderItem={renderMovies}
         keyExtractor={item => item.id}
         showsVerticalScrollIndicator={false}
+        onPress={() => navigation.navigate('Details')}
       />
     </View>
   );
