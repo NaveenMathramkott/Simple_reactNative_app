@@ -23,7 +23,7 @@ const listTab = [
 ];
 
 const Header = ({navigation}) => {
-  const [status, setStatus] = useState('Grid');
+  const [status, setStatus] = useState('IMDB');
 
   const setStatusFilter = name => {
     setStatus(name);
@@ -40,8 +40,8 @@ const Header = ({navigation}) => {
           {listTab.map((item, key) => (
             <TouchableOpacity
               key={key}
-              onPress={() => navigation.navigate('Details')}
-              // onPress={() => setStatusFilter(item.name)}
+              // onPress={() => navigation.navigate('Details')}
+              onPress={() => setStatusFilter(item.name)}
               style={[styles.btnTab, status === item.name && styles.activeTab]}>
               <View>
                 <Text style={styles.tabText}>{item.name}</Text>

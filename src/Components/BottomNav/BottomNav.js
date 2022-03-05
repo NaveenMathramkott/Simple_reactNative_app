@@ -21,8 +21,8 @@ const data = [
     text: 'Pages',
   },
   {
-    name: 'dots-horizontal',
-    text: 'Component',
+    name: 'database-search',
+    text: 'Search',
   },
 ];
 
